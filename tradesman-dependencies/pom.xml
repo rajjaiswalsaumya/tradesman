@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.tradesman</groupId>
+        <artifactId>tradesman</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <groupId>com.tradesman</groupId>
+    <artifactId>tradesman-dependencies</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>tradesman-dependencies</name>
+    <packaging>pom</packaging>
+    <description>tradesman-dependencies</description>
+
+    <properties>
+        <!-- Project configs -->
+        <java.version>1.8</java.version>
+        <resource.delimiter>@</resource.delimiter> <!-- delimiter that doesn't clash with Spring ${} placeholders -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <build-ui>false</build-ui>
+
+        <!-- jars version-->
+        <tradesman.version>${project.version}</tradesman.version>
+        <frontend-maven-plugin.version>1.12.0</frontend-maven-plugin.version>
+        <frontend-maven-plugin.nodeVersion>v12.22.3</frontend-maven-plugin.nodeVersion>
+        <frontend-maven-plugin.npmVersion>6.14.13</frontend-maven-plugin.npmVersion>
+        <kiteconnect.version>3.1.14</kiteconnect.version>
+        <spring-boot.version>2.6.1</spring-boot.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.zerodhatech.kiteconnect</groupId>
+                <artifactId>kiteconnect</artifactId>
+                <version>${kiteconnect.version}</version>
+                <type>jar</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-logging</artifactId>
+                <version>${spring-boot.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.logging.log4j</groupId>
+                        <artifactId>log4j-bom</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
