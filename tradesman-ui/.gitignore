@@ -2,6 +2,8 @@
 
 # compiled output
 /dist
+/.angular
+/ui-src
 /tmp
 /out-tsc
 # Only exists if Bazel was run
@@ -10,7 +12,6 @@
 # dependencies
 /node
 /node_modules
-/ui-src
 
 # profiling files
 chrome-profiler-events*.json
