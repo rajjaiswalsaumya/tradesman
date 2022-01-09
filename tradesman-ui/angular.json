@@ -3,7 +3,12 @@
   "version": 1,
   "defaultProject": "tradesman-ui",
   "cli": {
-    "defaultCollection": "@angular-eslint/schematics"
+    "defaultCollection": "@angular-eslint/schematics",
+    "cache": {
+      "enabled": true,
+      "path": ".angular",
+      "environment": "local"
+    }
   },
   "newProjectRoot": "projects",
   "projects": {
