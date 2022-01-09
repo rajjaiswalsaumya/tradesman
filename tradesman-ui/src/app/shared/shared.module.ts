@@ -5,9 +5,7 @@ import { PrimengModule } from './primeng.module';
 
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule, PrimengModule,
-  ],
+  imports: [CommonModule, PrimengModule],
+  exports: [PrimengModule],
 })
-export class SharedModule {
-}
+export class SharedModule {}

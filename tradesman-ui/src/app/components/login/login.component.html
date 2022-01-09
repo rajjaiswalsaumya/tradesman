@@ -1,1 +1,22 @@
-login-works
+<div class="p-grid login" style="height: 100vh">
+  <div class="p-col-6">
+    <p-card header="Login with Provider" [style]="{ minWidth: '500px' }" styleClass="p-card-shadow" class="login-card">
+      <!-- Username -->
+      <div class="p-float-label">
+        <input id="float-input-username" class="p-inputtext-lg" type="text" pInputText />
+        <label for="float-input-username">Username</label>
+      </div>
+
+      <!-- Password -->
+      <div class="p-float-label">
+        <input id="float-input-password" class="p-inputtext-lg" type="password" pInputText />
+        <label for="float-input-password">Password</label>
+      </div>
+
+      <ng-template pTemplate="footer">
+        <p-button label="Save" icon="pi pi-check"></p-button>
+        <p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
+      </ng-template>
+    </p-card>
+  </div>
+</div>
