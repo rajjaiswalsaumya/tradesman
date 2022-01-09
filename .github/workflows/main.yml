@@ -34,4 +34,4 @@ jobs:
       -  name: Build with Maven
          run: |
            mvn --batch-mode --update-snapshots verify
-           mvn clean install -Pbuild-only-ui
+           mvn clean install -Pbuild-ui
