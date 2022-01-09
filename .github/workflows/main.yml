@@ -33,5 +33,4 @@ jobs:
             ${{ runner.os }}-node-
       -  name: Build with Maven
          run: |
-           mvn --batch-mode --update-snapshots verify
-           mvn clean install -Pbuild-ui
+           mvn clean install -Pbuild-ui --batch-mode --update-snapshots verify
